@@ -1,0 +1,47 @@
+{
+  "name": "my-chakra-app",
+  "version": "0.1.0",
+  "homepage": "https://ncerne00.github.io/ncerne.com",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "deploy": "next build && next export && touch ./out/.nojekyll && echo 'ncerne.com' > ./out/CNAME && git add out/ && git commit -m \"Deploy gh-pages\" && git subtree push --prefix out origin gh-pages",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.1",
+    "@chakra-ui/react": "^2.1.2",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "babel-core": "^6.26.3",
+    "deploy": "^1.0.3",
+    "export": "^0.1.337",
+    "framer-motion": "^6.3.3",
+    "graphql-request": "^4.3.0",
+    "iconv-lite": "^0.6.3",
+    "moment": "^2.29.3",
+    "next": "^12.1.6",
+    "pdfjs-dist": "^2.13.216",
+    "react": "18.1.0",
+    "react-dom": "^18.1.0",
+    "react-icons": "^4.3.1",
+    "react-markdown": "^8.0.3",
+    "react-pdf": "^5.7.2",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-toc": "^3.0.0",
+    "react-tsparticles": "^2.0.6",
+    "remark": "^14.0.2",
+    "slugify": "^1.6.5",
+    "tsparticles": "^2.0.6",
+    "typewriter-effect": "^2.18.2"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-define": "^2.0.1",
+    "eslint": "8.16.0",
+    "eslint-config-next": "12.1.6",
+    "gh-pages": "^4.0.0"
+  }
+}

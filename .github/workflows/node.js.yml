@@ -26,6 +26,8 @@ jobs:
     - run: npm ci
     - run: npm run build
     - run: npm run export
+    - run: touch ./out/.nojekyll
+    - run: echo 'ncerne.com' > ./out/CNAME
     
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@v4.3.3

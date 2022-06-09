@@ -1,10 +1,6 @@
 import { gql, GraphQLClient } from 'graphql-request'
 
-const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHCMS_URL, {
-  headers: {
-    "Authorization" : process.env.NEXT_PUBLIC_GRAPH_CMS_TOKEN
-  }
-});
+const client = new GraphQLClient(process.env.NEXT_PUBLIC_GRAPHCMS_URL);
 
 export const getPosts = async () => {
   const query = gql`

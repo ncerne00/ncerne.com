@@ -25,6 +25,9 @@ jobs:
         cache-dependency-path: ./package-lock.json
     - run: npm ci -f
     - run: npm run build
+      env:
+        NEXT_PUBLIC_GRAPHCMS_TOKEN: ${{ secrets.NEXT_PUBLIC_GRAPHCMS_TOKEN }},
+        NEXT_PUBLIC_GRAPHCMS_URL: ${{ secrets.NEXT_PUBLIC_GRAPHCMS_URL }} 
     - run: npm run export
     - run: touch ./out/.nojekyll
     - run: echo 'ncerne.com' > ./out/CNAME
